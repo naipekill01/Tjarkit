@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TejarKit | Tienda de Tejas Termoacústicas</title>
+    <style>
+        :root {
+            --azul:#0057b8;
+            --rojo:#c8102e;
+            --blanco:#ffffff;
+            --gris:#f4f4f4;
+        }
+        *,*::before,*::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: system-ui, Roboto, sans-serif;
+            line-height: 1.5;
+            background: var(--gris);
+            color: #333;
+        }
+        .header {
+            background: var(--azul);
+            color: var(--blanco);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
+        .nav a {
+            color: var(--blanco);
+            text-decoration: none;
+            margin-left: 1.25rem;
+            font-weight: 500;
+            transition: opacity .25s;
+        }
+        .nav a:hover {
+            opacity: .8;
+        }
+        .hero-message {
+            background: var(--blanco);
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: 0 0 .5rem .5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,.08);
+        }
+        .hero-message h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: .5rem;
+        }
+        .envio {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #111;
+        }
+        .envio svg {
+            width: 24px;
+            height: 24px;
+        }
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            background: var(--blanco);
+            margin-top: 1.25rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,.06);
+        }
+        .carousel-track {
+            display: flex;
+            width: max-content;
+            animation: scroll 25s linear infinite;
+        }
+        .carousel-track img {
+            width: 350px;
+            height: 250px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        @keyframes scroll {
+            0% {transform: translateX(0);}
+            100% {transform: translateX(calc(-350px * 5));}
+        }
+        .carousel:hover .carousel-track {
+            animation-play-state: paused;
+        }
+        footer {
+            background: var(--rojo);
+            color: var(--blanco);
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            .nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                padding-bottom: 1rem;
+            }
+            .carousel-track img {
+                width: 90vw;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <h1 class="logo">TejarKit</h1>
+            <nav class="nav">
+                <a href="productos.html">Productos</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section class="hero-message">
+            <h2>Tejas con 20 años de garantía, productos totalmente importados</h2>
+            <p><strong>Te brindamos asesoría técnica sobre el material que necesitas</strong></p>
+            <p class="envio">
+                <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                    <path d="M3 3h13v11H3zM16 8h4l3 3v3h-7z"/>
+                    <circle cx="7.5" cy="18.5" r="2.5"/>
+                    <circle cx="17.5" cy="18.5" r="2.5"/>
+                </svg>
+                Acarreos a toda Colombia
+            </p>
+        </section>
+        <section class="carousel">
+            <div class="carousel-track">
+                <img src="greca.png" alt="Teja perfil Greca" />
+                <img src="ondaAlta.jpg" alt="Teja Onda Alta" />
+                <img src="ondabaja.jpg" alt="Teja Onda Baja" />
+                <img src="colonial.jpg" alt="Teja Colonial" />
+                <img src="tornillo.jpg" alt="Tornillo autorroscante para tejas" />
+                <img src="greca.png" alt="Teja perfil Greca" />
+                <img src="ondaAlta.jpg" alt="Teja Onda Alta" />
+                <img src="ondabaja.jpg" alt="Teja Onda Baja" />
+                <img src="colonial.jpg" alt="Teja Colonial" />
+                <img src="tornillo.jpg" alt="Tornillo autorroscante para tejas" />
+            </div>
+        </section>
+    </main>
+    <footer>
+        líder en venta de tejas por calidad
+    </footer>
+</body>
+</html>
