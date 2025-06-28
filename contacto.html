@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | TejarKit</title>
+  <style>
+    :root {
+      --azul: #0057b8;
+      --rojo: #c8102e;
+      --blanco: #ffffff;
+      --gris: #f4f4f4;
+      --verde: #25D366;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: system-ui, Roboto, sans-serif;
+      background: var(--gris);
+      color: #333;
+      line-height: 1.5;
+    }
+    .header {
+      background: var(--azul);
+      color: var(--blanco);
+    }
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 1rem 0;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 1.75rem;
+      font-weight: bold;
+    }
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .nav a {
+      color: var(--blanco);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav a:hover {
+      opacity: 0.85;
+    }
+    .contact-box {
+      background: var(--blanco);
+      padding: 2rem;
+      margin-top: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .contact-box h2 {
+      margin-bottom: 1rem;
+      color: var(--azul);
+    }
+    .contact-box p {
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      background: var(--rojo);
+      color: var(--blanco);
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--verde);
+      color: white;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      text-decoration: none;
+      z-index: 1000;
+    }
+    .whatsapp-button svg {
+      width: 28px;
+      height: 28px;
+      fill: white;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 768px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 1rem;
+      }
+      .contact-box {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <h1 class="logo">TejarKit</h1>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="contact-box">
+      <h2>Información de Contacto</h2>
+      <p><strong>Asesor:</strong> Javier Avila</p>
+      <p><strong>Ubicación:</strong> Carrera 48 #39-4</p>
+    </section>
+  </main>
+
+  <footer>
+    líder en venta de tejas por calidad
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/573145284619" class="whatsapp-button" target="_blank" aria-label="Hablar por WhatsApp">
+    <svg viewBox="0 0 32 32"><path d="M16 0c-8.837 0-16 7.163-16 16a15.94 15.94 0 002.344 8.407L0 32l7.739-2.307A15.933 15.933 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.474a13.44 13.44 0 01-7.071-1.963l-.504-.294-4.593 1.371 1.448-4.432-.323-.544A13.433 13.433 0 1129.474 16c0 7.438-6.036 13.474-13.474 13.474zm7.8-9.586c-.426-.213-2.52-1.242-2.912-1.384-.392-.142-.677-.213-.962.213s-1.1 1.384-1.347 1.672c-.248.285-.49.32-.916.107-.426-.214-1.799-.662-3.426-2.113-1.265-1.127-2.118-2.516-2.365-2...."/></svg>
+  </a>
+
+</body>
+</html>
+
